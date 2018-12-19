@@ -40,31 +40,31 @@ Employee.remove({"designation":"software developer"},(err,data)=>{
         console.log("designation with software developer   removed    ");
     }
 })
-app.get('/',(req,res)=>{
-    res.send("jello world");
-});
+// app.get('/',(req,res)=>{
+//     res.send("jello world");
+// });
 
 
 
 
-app.post('/',(req,res)=>{
-    var newEmployee={
-        ename: req.body.ename,
-        departmant: req.body.departmant,
-        designation: req.body.designation,
-        salary: req.body.salary,
-        city: req.body.city
-    }
-    Employee.create(newEmployee,(err, newEmp)=>{
-        if(err){
-            console.log(err);
-            res.send(err.message);
-        }
-        else{
-            res.send(newEmp);
-        }
-    })
-})
+// app.post('/',(req,res)=>{
+//     var newEmployee={
+//         ename: req.body.ename,
+//         departmant: req.body.departmant,
+//         designation: req.body.designation,
+//         salary: req.body.salary,
+//         city: req.body.city
+//     }
+//     Employee.create(newEmployee,(err, newEmp)=>{
+//         if(err){
+//             console.log(err);
+//             res.send(err.message);
+//         }
+//         else{
+//             res.send(newEmp);
+//         }
+//     })
+// })
 
 app.listen(port,()=>{
     console.log('The app is running at port ',port);
